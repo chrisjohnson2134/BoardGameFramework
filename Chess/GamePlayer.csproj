@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Game.Controls\Game.Controls.csproj" />
-    <ProjectReference Include="..\Game.Framework\Game.Framework.csproj" />
   </ItemGroup>
 
 </Project>
