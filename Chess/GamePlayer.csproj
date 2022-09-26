@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Chess.Framework\Game.Framework.csproj" />
     <ProjectReference Include="..\Game.Controls\Game.Controls.csproj" />
+    <ProjectReference Include="..\Game.Framework\Game.Framework.csproj" />
   </ItemGroup>
 
 </Project>
