@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Checkers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Game.Framework\Game.Framework.csproj" />
   </ItemGroup>
 

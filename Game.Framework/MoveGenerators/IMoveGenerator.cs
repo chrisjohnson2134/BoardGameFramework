@@ -1,9 +1,9 @@
 ﻿using Game.Framework.Models.Pieces;
-using Game.Framework.MoveGenerators.Moves;
+using Game.Framework.MoveGenerators.Checkers;
 using System;
 using System.Collections.Generic;
 
-namespace Game.Framework.MoveGenerators.Checkers
+namespace Game.Framework.MoveGenerators
 {
     public interface IMoveGenerator
     {
