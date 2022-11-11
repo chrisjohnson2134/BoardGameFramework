@@ -9,6 +9,8 @@ namespace Game.Framework.Models.Pieces.TicTacToe
 {
     public class XPiece : IPiece
     {
-        public List<IPieceMove> PieceMoves { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public List<IPieceMove> PieceMoves { get; set; }
+        public string Label => "X";
+
     }
 }

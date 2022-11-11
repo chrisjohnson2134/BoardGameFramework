@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace Game.Framework.Models.Pieces.TicTacToe
 {
-    public class YPiece : IPiece
+    public class OPiece : IPiece
     {
-        public List<IPieceMove> PieceMoves { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public List<IPieceMove> PieceMoves { get; set; }
+        public string Label => "O";
+
     }
 }

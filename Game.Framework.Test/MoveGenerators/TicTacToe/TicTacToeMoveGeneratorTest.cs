@@ -2,11 +2,6 @@
 using Game.Framework.Models.Pieces.TicTacToe;
 using Game.Framework.MoveGenerators.Moves.TicTacToeMoves;
 using Game.Framework.MoveGenerators.TicTacToe;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Game.Framework.Test.MoveGenerators.TicTacToe
 {
@@ -44,7 +39,7 @@ namespace Game.Framework.Test.MoveGenerators.TicTacToe
         public void PiecesPlaced()
         {
             _ticTacToeBoard.Tiles[0,0].TilePiece = new XPiece();
-            _ticTacToeBoard.Tiles[2,2].TilePiece = new YPiece();
+            _ticTacToeBoard.Tiles[2,2].TilePiece = new OPiece();
 
             var validMoves = _ticTacToeMoveGenerator.GenerateAllMoves().Cast<PlaceMove>().ToList();
 

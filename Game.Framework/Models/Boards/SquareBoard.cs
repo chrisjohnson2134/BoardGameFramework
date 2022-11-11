@@ -24,6 +24,7 @@ namespace Game.Framework.Models.Boards
                 for (int col = 0; col < columns; col++)
                 {
                     Tiles[row, col] = new Tile();
+                    Tiles[row, col].Id = (row * columns) + col;
                 }
             }
         }

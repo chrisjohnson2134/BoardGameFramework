@@ -2,16 +2,10 @@
 using Game.Controls.Board;
 using Game.Controls.WpfHelpers;
 using Game.Framework.Models.Boards;
-using Game.Framework.Models.Checkers;
-using Game.Framework.Models.Pieces.Checkers;
+using Game.Framework.Models.Pieces.TicTacToe;
 using Game.Framework.MoveGenerators;
-using Game.Framework.MoveGenerators.Checkers;
-using Game.Framework.MoveGenerators.Moves.CheckersMoves;
+using Game.Framework.MoveGenerators.Moves.TicTacToeMoves;
 using Game.Framework.MoveGenerators.TicTacToe;
-using Game.Framework.SetupFactories.Checkers;
-using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
@@ -46,6 +40,21 @@ namespace Game
         //A human will know how to play the game.
         private void TileVM_TileClicked(object? sender, ITile e)
         {
+            var validMove = _moveGenerator.GeneratePieceMoves(e.TilePiece).Any(t => t is PlaceMove);
+            var tile = TilePieces.FirstOrDefault(t => t.Id == e.Id);
+
+            if (validMove)
+            {
+                if(PlayersTurn== Constants.Black) 
+                {
+                    tile.TilePiece = new XPiece();
+                }
+                else
+                {
+                    tile.TilePiece = new OPiece();
+                }
+                swapPlayer();
+            }
         }
 
         public ObservableCollection<TileViewModel> TilePieces
