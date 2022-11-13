@@ -1,9 +1,4 @@
 ﻿using Game.Framework.Models.Pieces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Game.Framework.Models.Boards
 {
@@ -18,7 +13,7 @@ namespace Game.Framework.Models.Boards
             _columns = columns;
             _rows = rows;
 
-            Tiles = new ITile[columns, rows];
+            Tiles = new ITile[rows, columns];
             for (int row = 0; row < rows; row++)
             {
                 for (int col = 0; col < columns; col++)
@@ -29,6 +24,9 @@ namespace Game.Framework.Models.Boards
             }
         }
 
+        /// <summary>
+        /// Follows Row,Column positioning
+        /// </summary>
         public ITile[,] Tiles { get; set; }
 
         public int Rows => _rows;

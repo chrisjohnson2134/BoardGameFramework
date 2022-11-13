@@ -13,5 +13,8 @@ namespace Chess.Framework.Constants
         public static string White = "White";
         public static string Yellow = "Yellow";
         public static string Transparent = "Transparent";
+
+        public static int TERRE_ROWS = 9;
+        public static int TERRE_COLS = 25;
     }
 }
